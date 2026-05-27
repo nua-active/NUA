@@ -5,8 +5,7 @@ export function getWhatsAppHref(message: string) {
   const encoded = encodeURIComponent(message);
 
   if (!number) {
-    // Fallback: si no hay número configurado, enviamos a Instagram.
-    return BRAND.instagramUrl;
+    return `https://wa.me/?text=${encoded}`;
   }
 
   return `https://wa.me/${number}?text=${encoded}`;
@@ -26,4 +25,3 @@ export function buildProductWhatsAppMessage(input: {
 
   return parts.join(" — ");
 }
-

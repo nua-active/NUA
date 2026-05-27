@@ -6,11 +6,13 @@ import { Price } from "@/components/Price";
 import { ButtonAnchor, ButtonLink } from "@/components/Button";
 import { BRAND } from "@/lib/brand";
 import { buildProductWhatsAppMessage, getWhatsAppHref } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { isSanityConfigured, sanityFetch } from "@/sanity/lib/fetch";
 import { PRODUCT_BY_SLUG_QUERY } from "@/sanity/lib/queries";
 import type { Product } from "@/sanity/lib/types";
 import { urlFor } from "@/sanity/lib/image";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
+import { ProductSizeConsultation } from "@/components/ProductSizeConsultation";
 
 export async function generateMetadata({
   params,
@@ -161,55 +163,11 @@ export default async function ProductPage({
 
             {/* Selector de talles y consultas */}
             {inStock.length ? (
-              <div className="rounded-[32px] border border-border/30 bg-white/50 backdrop-blur-md p-6 shadow-sm flex flex-col gap-5">
-                <div className="flex flex-col gap-1">
-                  <div className="text-xs font-bold uppercase tracking-wider text-brand-ink">
-                    1. Elegí tu talle para consultar
-                  </div>
-                  <div className="text-[11px] text-foreground/60">
-                    Al seleccionar un talle se abrirá WhatsApp con una plantilla del pedido.
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {inStock.map((v) => {
-                    const msg = buildProductWhatsAppMessage({
-                      productTitle: product.title,
-                      size: v.size,
-                      url: pageUrl,
-                    });
-                    return (
-                      <ButtonAnchor
-                        key={v.size}
-                        href={getWhatsAppHref(msg)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="secondary"
-                        className="px-5 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider bg-white/80 border-brand-peach/40 hover:bg-brand-peach/30 text-brand-ink shadow-sm"
-                      >
-                        Talle {v.size}
-                      </ButtonAnchor>
-                    );
-                  })}
-                </div>
-
-                <div className="border-t border-border/10 pt-4 flex flex-col gap-3">
-                  <div className="text-xs font-bold uppercase tracking-wider text-brand-ink">
-                    O consultanos de forma general:
-                  </div>
-                  <ButtonAnchor
-                    href={getWhatsAppHref(genericMsg)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-xs font-bold uppercase tracking-widest text-white bg-[#25d366] hover:bg-[#20ba5a] rounded-full shadow-md transition-all duration-300"
-                  >
-                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.031 2c-5.506 0-9.975 4.47-9.975 9.977 0 1.758.459 3.472 1.33 4.982l-1.417 5.176 5.297-1.39c1.464.798 3.107 1.218 4.764 1.219h.004c5.507 0 9.977-4.47 9.977-9.978.002-2.67-1.037-5.18-2.92-7.065C17.21 3.038 14.7 2.003 12.031 2zm6.99 14.025c-.297.837-1.72 1.537-2.355 1.636-.576.09-1.326.167-2.126-.09-.5-.16-1.127-.417-1.93-.76-3.434-1.458-5.65-4.96-5.823-5.187-.172-.228-1.398-1.857-1.398-3.541 0-1.684.86-2.512 1.17-2.852.29-.317.76-.44 1.23-.44h.38c.36 0 .84-.04 1.21.84.38.91 1.29 3.15 1.41 3.39.12.24.12.52-.04.83-.16.31-.38.56-.56.76-.18.2-.38.45-.16.83.47.8 2.057 3.385 4.416 4.78.607.36 1.09.47 1.49.37.407-.1 1.297-.53 1.48-1.03.18-.5.18-.94.12-1.03-.06-.09-.24-.14-.52-.29z"/>
-                    </svg>
-                    {BRAND.ui.ctaPrimary}
-                  </ButtonAnchor>
-                </div>
-              </div>
+              <ProductSizeConsultation
+                pageUrl={pageUrl}
+                productTitle={product.title}
+                sizes={inStock.map((v) => v.size)}
+              />
             ) : (
               <div className="rounded-[32px] border border-red-100 bg-red-50/50 backdrop-blur-md p-6 shadow-sm flex flex-col gap-4 text-xs text-foreground/80 leading-relaxed">
                 <p>
@@ -221,9 +179,7 @@ export default async function ProductPage({
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-xs font-bold uppercase tracking-widest text-white bg-[#25d366] hover:bg-[#20ba5a] rounded-full shadow-md transition-all duration-300"
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.031 2c-5.506 0-9.975 4.47-9.975 9.977 0 1.758.459 3.472 1.33 4.982l-1.417 5.176 5.297-1.39c1.464.798 3.107 1.218 4.764 1.219h.004c5.507 0 9.977-4.47 9.977-9.978.002-2.67-1.037-5.18-2.92-7.065C17.21 3.038 14.7 2.003 12.031 2zm6.99 14.025c-.297.837-1.72 1.537-2.355 1.636-.576.09-1.326.167-2.126-.09-.5-.16-1.127-.417-1.93-.76-3.434-1.458-5.65-4.96-5.823-5.187-.172-.228-1.398-1.857-1.398-3.541 0-1.684.86-2.512 1.17-2.852.29-.317.76-.44 1.23-.44h.38c.36 0 .84-.04 1.21.84.38.91 1.29 3.15 1.41 3.39.12.24.12.52-.04.83-.16.31-.38.56-.56.76-.18.2-.38.45-.16.83.47.8 2.057 3.385 4.416 4.78.607.36 1.09.47 1.49.37.407-.1 1.297-.53 1.48-1.03.18-.5.18-.94.12-1.03-.06-.09-.24-.14-.52-.29z"/>
-                  </svg>
+                  <WhatsAppIcon size={18} />
                   Consultar igual por WhatsApp
                 </ButtonAnchor>
               </div>
@@ -242,4 +198,3 @@ export default async function ProductPage({
     </main>
   );
 }
-

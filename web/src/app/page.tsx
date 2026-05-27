@@ -4,6 +4,7 @@ import { BRAND } from "@/lib/brand";
 import { ButtonAnchor, ButtonLink } from "@/components/Button";
 import { ProductCard } from "@/components/ProductCard";
 import { Testimonials } from "@/components/Testimonials";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { isSanityConfigured, sanityFetch } from "@/sanity/lib/fetch";
 import { CATEGORIES_QUERY, PRODUCTS_QUERY } from "@/sanity/lib/queries";
 import type { Category, Product } from "@/sanity/lib/types";
@@ -119,7 +120,10 @@ export default function Home() {
                 03
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="font-bold text-brand-ink text-sm sm:text-base">Escribinos por WhatsApp</h3>
+                <h3 className="flex items-center gap-2 font-bold text-brand-ink text-sm sm:text-base">
+                  <WhatsAppIcon size={20} />
+                  Escribinos por WhatsApp
+                </h3>
                 <p className="text-xs leading-relaxed text-foreground/70">
                   Tocá el botón para enviarnos tu consulta. Te asesoramos de manera personalizada para coordinar el pago y envío.
                 </p>

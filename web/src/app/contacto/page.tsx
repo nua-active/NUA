@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { BRAND } from "@/lib/brand";
 import { ButtonAnchor } from "@/components/Button";
 import { getWhatsAppHref } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export default function ContactoPage() {
   return (
@@ -20,7 +21,8 @@ export default function ContactoPage() {
           {/* WhatsApp Card */}
           <div className="glass-card rounded-[32px] p-8 shadow-[var(--shadow)] flex flex-col justify-between gap-6">
             <div className="flex flex-col gap-2">
-              <div className="text-sm font-bold uppercase tracking-wider text-brand-ink">
+              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-ink">
+                <WhatsAppIcon size={22} />
                 WhatsApp
               </div>
               <p className="text-xs leading-relaxed text-foreground/70">
@@ -32,8 +34,9 @@ export default function ContactoPage() {
                 href={getWhatsAppHref(BRAND.whatsapp.defaultMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-brand-ink hover:opacity-95 rounded-full shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-[#25d366] hover:bg-[#20ba5a] rounded-full shadow-sm"
               >
+                <WhatsAppIcon size={18} />
                 {BRAND.ui.ctaPrimary}
               </ButtonAnchor>
             </div>
