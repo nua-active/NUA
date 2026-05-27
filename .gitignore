@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment (secrets)
+.env
+.env.local
+.env.*.local
+**/.env
+!**/.env.example
+
+# Next.js
+web/.next/
+web/out/
+web/.vercel/
+
+# Sanity / build
+studio/dist/
+.sanity/
+*.tsbuildinfo
+
+# OS & logs
+.DS_Store
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp

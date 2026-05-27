@@ -1,0 +1,259 @@
+{
+  "categories": [
+    { "name": "Tops", "slug": "tops" },
+    { "name": "Remeras", "slug": "remeras" },
+    { "name": "Calzas", "slug": "calzas" },
+    { "name": "Faldas / Polleras", "slug": "faldas-polleras" },
+    { "name": "Pantalones", "slug": "pantalones" },
+    { "name": "Monitos", "slug": "monitos" },
+    { "name": "Shorts", "slug": "shorts" }
+  ],
+  "products": [
+    {
+      "codeSupplier": "125-1-s",
+      "codeNua": "top heart",
+      "title": "Top Heart · Negro",
+      "categorySlug": "tops",
+      "colors": ["negro"],
+      "price": 20800,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "125-2-s",
+      "codeNua": "top heart",
+      "title": "Top Heart · Azul oscuro",
+      "categorySlug": "tops",
+      "colors": ["azul oscuro"],
+      "price": 20800,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "156-3-s",
+      "codeNua": "top fav",
+      "title": "Top Fav · Nude",
+      "categorySlug": "tops",
+      "colors": ["nude"],
+      "price": 23400,
+      "variants": [{ "size": "S", "stock": 2 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-59-1",
+      "codeNua": "top basic",
+      "title": "Top Basic · Negro",
+      "categorySlug": "tops",
+      "colors": ["negro"],
+      "price": 15600,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "77-4-L",
+      "codeNua": "top sky",
+      "title": "Top Sky · Celeste",
+      "categorySlug": "tops",
+      "colors": ["celeste"],
+      "price": 19500,
+      "variants": [{ "size": "L", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "77-4-s",
+      "codeNua": "top sky",
+      "title": "Top Sky · Celeste (S)",
+      "categorySlug": "tops",
+      "colors": ["celeste"],
+      "price": 19500,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "",
+      "codeNua": "remera contour",
+      "title": "Remera Contour · Beige/Negro",
+      "categorySlug": "remeras",
+      "colors": ["beige", "negro"],
+      "price": 26000,
+      "variants": [{ "size": "S", "stock": 0 }],
+      "status": "preorder",
+      "description": "Solo preventa."
+    },
+    {
+      "codeSupplier": "32159-55-1",
+      "codeNua": "calza sky",
+      "title": "Calza Sky · Celeste",
+      "categorySlug": "calzas",
+      "colors": ["celeste"],
+      "price": 20800,
+      "variants": [{ "size": "M", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-126-2-s",
+      "codeNua": "calza heart",
+      "title": "Calza Heart · Celeste",
+      "categorySlug": "calzas",
+      "colors": ["celeste"],
+      "price": 23400,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-126-1-s",
+      "codeNua": "calza heart",
+      "title": "Calza Heart · Negra",
+      "categorySlug": "calzas",
+      "colors": ["negra"],
+      "price": 23400,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-233-4-s",
+      "codeNua": "calza fav",
+      "title": "Calza Fav · Nude",
+      "categorySlug": "calzas",
+      "colors": ["nude"],
+      "price": 18200,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-157-3-m",
+      "codeNua": "falda fav",
+      "title": "Falda Fav · Nude",
+      "categorySlug": "faldas-polleras",
+      "colors": ["nude"],
+      "price": 18200,
+      "variants": [{ "size": "M", "stock": 2 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-172-2-s",
+      "codeNua": "calza oxford",
+      "title": "Calza Oxford · DDL",
+      "categorySlug": "calzas",
+      "colors": ["ddl"],
+      "price": 23400,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-172-2-m",
+      "codeNua": "calza oxford",
+      "title": "Calza Oxford · DDL (M)",
+      "categorySlug": "calzas",
+      "colors": ["ddl"],
+      "price": 23400,
+      "variants": [{ "size": "M", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "LQ275-1-XL",
+      "codeNua": "calza cozy",
+      "title": "Calza Cozy · Negra (XL)",
+      "categorySlug": "calzas",
+      "colors": ["negra"],
+      "price": 28600,
+      "variants": [{ "size": "XL", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "LQ275-1-M",
+      "codeNua": "calza cozy",
+      "title": "Calza Cozy · Negra",
+      "categorySlug": "calzas",
+      "colors": ["negra"],
+      "price": 28600,
+      "variants": [{ "size": "M", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-146-1-L",
+      "codeNua": "pant comfy",
+      "title": "Pant Comfy · Negro",
+      "categorySlug": "pantalones",
+      "colors": ["negro"],
+      "price": 23400,
+      "variants": [{ "size": "L", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-146-3-M",
+      "codeNua": "pant comfy",
+      "title": "Pant Comfy · Choco",
+      "categorySlug": "pantalones",
+      "colors": ["choco"],
+      "price": 23400,
+      "variants": [{ "size": "M", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-116-2-S",
+      "codeNua": "sastrero sporty",
+      "title": "Sastrero Sporty · Gris",
+      "categorySlug": "pantalones",
+      "colors": ["gris"],
+      "price": 36400,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-1-1",
+      "codeNua": "monito",
+      "title": "Monito · Negro",
+      "categorySlug": "monitos",
+      "colors": ["negro"],
+      "price": 20800,
+      "variants": [
+        { "size": "S", "stock": 1 },
+        { "size": "L", "stock": 1 }
+      ],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-105",
+      "codeNua": "short soft",
+      "title": "Short Soft · Beige",
+      "categorySlug": "shorts",
+      "colors": ["beige"],
+      "price": 23400,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "32159-78-1-S",
+      "codeNua": "calza basic",
+      "title": "Calza Basic · Negro",
+      "categorySlug": "calzas",
+      "colors": ["negro"],
+      "price": 19500,
+      "variants": [{ "size": "S", "stock": 1 }],
+      "status": "available"
+    },
+    {
+      "codeSupplier": "LQ324-2-M",
+      "codeNua": "pant jogging lineas",
+      "title": "Pant Jogging Líneas",
+      "categorySlug": "pantalones",
+      "colors": [],
+      "price": 0,
+      "variants": [{ "size": "M", "stock": 0 }],
+      "status": "preorder",
+      "description": "Preventa. Consultar precio."
+    },
+    {
+      "codeSupplier": "32159-43-3",
+      "codeNua": "pollera tablas",
+      "title": "Pollera Tablas",
+      "categorySlug": "faldas-polleras",
+      "colors": [],
+      "price": 0,
+      "variants": [{ "size": "Único", "stock": 0 }],
+      "status": "preorder",
+      "description": "Preventa. Consultar precio."
+    }
+  ]
+}
