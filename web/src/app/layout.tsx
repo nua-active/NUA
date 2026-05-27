@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description: BRAND.home.heroSubtitle,
     type: "website",
     locale: "es_AR",
+    images: [{ url: "/logo.jpeg", width: 1216, height: 1218, alt: BRAND.name }],
   },
 };
 

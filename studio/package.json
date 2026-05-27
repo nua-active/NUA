@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "sanity dev",
     "build": "sanity build",
-    "deploy": "sanity deploy",
+    "deploy": "sanity deploy --url activewear-nua -y",
     "import:stock": "node scripts/import-stock.mjs",
     "import:stock:ndjson": "node scripts/build-ndjson.mjs && npx sanity dataset import import/stock-2026-05-27.ndjson --dataset production --replace"
   },
